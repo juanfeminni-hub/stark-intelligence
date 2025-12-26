@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-starken-primary: #4A6B54;
+  --color-starken-secondary: #7A9B84;
+  --color-starken-light: #B8D4BE;
+  --color-dark-bg: #1a1a2e;
+  --color-dark-card: #16213e;
+  --color-dark-sidebar: #0f0f1a;
+  --color-dark-text: #eaeaea;
+  --color-dark-muted: #a0a0a0;
+  --color-dark-border: #2d3748;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-starken-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3d5a46;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.3s ease-out;
+}
